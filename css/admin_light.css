@@ -4,7 +4,8 @@
     --primary: #10bce9;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -12,6 +13,7 @@ html, body {
     background-color: var(--primary);
     border: 0px solid white;
 }
+
 .back-btn svg {
     fill: var(--primary);
 }
@@ -47,10 +49,10 @@ html, body {
     color: grey;
 }
 
-    .patient-authentication a:hover {
-        text-decoration: none;
-        color: black;
-    }
+.patient-authentication a:hover {
+    text-decoration: none;
+    color: black;
+}
 
 .patient-authentication .background {
     position: absolute;
@@ -82,17 +84,20 @@ html, body {
     border-radius: 5px;
 }
 
-    .patient-div h4 {
-        color: #4367d3;
-    }
+.patient-div h4 {
+    color: #4367d3;
+}
 
-    .patient-div:hover {
-        background-color: #4367d3;
-    }
+.patient-div:hover {
+    background-color: #4367d3;
+}
 
-        .patient-div:hover h4, .family-friend-div:hover h4, .concierge-div:hover h4, .business-partners-div:hover h4 {
-            color: white;
-        }
+.patient-div:hover h4,
+.family-friend-div:hover h4,
+.concierge-div:hover h4,
+.business-partners-div:hover h4 {
+    color: white;
+}
 
 .family-friend-div {
     width: 350px;
@@ -102,13 +107,13 @@ html, body {
     border-radius: 5px;
 }
 
-    .family-friend-div h4 {
-        color: #00adef;
-    }
+.family-friend-div h4 {
+    color: #00adef;
+}
 
-    .family-friend-div:hover {
-        background-color: #00adef;
-    }
+.family-friend-div:hover {
+    background-color: #00adef;
+}
 
 .concierge-div {
     width: 350px;
@@ -118,13 +123,13 @@ html, body {
     border-radius: 5px;
 }
 
-    .concierge-div h4 {
-        color: #228b22;
-    }
+.concierge-div h4 {
+    color: #228b22;
+}
 
-    .concierge-div:hover {
-        background-color: #228b22;
-    }
+.concierge-div:hover {
+    background-color: #228b22;
+}
 
 .business-partners-div {
     width: 350px;
@@ -134,13 +139,13 @@ html, body {
     border-radius: 5px;
 }
 
-    .business-partners-div h4 {
-        color: #d90f81;
-    }
+.business-partners-div h4 {
+    color: #d90f81;
+}
 
-    .business-partners-div:hover {
-        background-color: #d90f81;
-    }
+.business-partners-div:hover {
+    background-color: #d90f81;
+}
 
 .footer-bg {
     background-color: #282828;
@@ -180,7 +185,7 @@ html, body {
 
 
 /* Create Patient Request Screen Css */
- .create-patient-request input:focus {
+.create-patient-request input:focus {
     box-shadow: none;
 }
 
@@ -204,7 +209,12 @@ html, body {
     display: inline-block;
 }
 
-.iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=text],
+.iti--allow-dropdown input[type=tel],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=text],
+.iti--separate-dial-code input[type=tel] {
     padding-right: 6px;
     padding-left: 52px;
     margin-left: 0;
@@ -229,7 +239,8 @@ input[type=file]::-webkit-file-upload-button {
     border: 0px;
 }
 
-x::-webkit-file-upload-button, input[type=file]:after {
+x::-webkit-file-upload-button,
+input[type=file]:after {
     content: 'Browse...';
     left: 100%;
     margin-left: 3px;
@@ -270,20 +281,21 @@ x::-webkit-file-upload-button, input[type=file]:after {
     background-color: #f0f0f0;
 }
 
-    .table-head th {
-        font-weight: 500;
-    }
+.table-head th {
+    font-weight: 500;
+}
 
 .table .table-body tr {
     height: 55px;
 }
 
-.table td:first-child, th:first-child {
+.table td:first-child,
+th:first-child {
     padding-left: 20px;
 }
 
-.dashboard-card{
-    border-radius : 5px;
+.dashboard-card {
+    border-radius: 5px;
 }
 
 .patient-dashboard input:focus {
@@ -296,145 +308,154 @@ x::-webkit-file-upload-button, input[type=file]:after {
 
 /* Admin Dashboard CSS */
 
-.status-tab div{
+.status-tab div {
     border-radius: 8px;
+    cursor: default;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.status-new{
+.status-new {
     background-color: #e9eaef;
     color: #203f9a;
-    border:1px solid #203f9a;
+    border: 1px solid #203f9a;
 }
 
-.status-pending{
+.status-pending {
     background-color: #e5f2f8;
     color: #00adef;
-    border:1px solid #00adef;
+    border: 1px solid #00adef;
 }
 
-.status-active{
+.status-active {
     background-color: #e9f0e8;
     color: #228c20;
-    border:1px solid #228c20;
+    border: 1px solid #228c20;
 }
 
-.status-conclude{
+.status-conclude {
     background-color: #f7e6ee;
     color: #da0f82;
-    border:1px solid #da0f82;
+    border: 1px solid #da0f82;
 }
 
 .status-to-close {
     background-color: #e5eef5;
     color: #0370d7;
-    border:1px solid #0370d7;
+    border: 1px solid #0370d7;
 }
 
-.status-unpaid{
+.status-unpaid {
     background-color: #efeef4;
     color: #9966cd;
-    border:1px solid #9966cd;
+    border: 1px solid #9966cd;
 }
 
 .active .status-new {
     background-color: #203f9a;
     color: white;
-    border:1px solid #203f9a;
+    border: 1px solid #203f9a;
 }
 
-.active .status-pending{
+.active .status-pending {
     background-color: #00adef;
     color: white;
-    border:1px solid #00adef;
+    border: 1px solid #00adef;
 }
 
-.active .status-active{
+.active .status-active {
     background-color: #228c20;
     color: white;
-    border:1px solid #228c20;
+    border: 1px solid #228c20;
 }
 
 .active .status-conclude {
     background-color: #da0f82;
     color: white;
-    border:1px solid #da0f82;
+    border: 1px solid #da0f82;
 }
 
-.active .status-to-close{
+.active .status-to-close {
     background-color: #0370d7;
     color: white;
-    border:1px solid #0370d7;
+    border: 1px solid #0370d7;
 }
 
-.active .status-unpaid{
+.active .status-unpaid {
     background-color: #9966cd;
     color: white;
-    border:1px solid #9966cd;
+    border: 1px solid #9966cd;
 }
 
-.admin-dashboard input{
+.admin-dashboard input {
     box-shadow: none;
     border-width: 0px;
 }
 
-.admin-dashboard input:focus{
+.admin-dashboard input:focus {
     box-shadow: none;
 }
 
-.admin-dashboard select:focus{
+.admin-dashboard select:focus {
     box-shadow: none;
 }
 
-.normal-input{
+.normal-input {
     border: 1px solid grey;
 }
 
-.normal-input:focus-within{
+.normal-input:focus-within {
     border: 1px solid var(--primary);
 }
 
-.filter-options{
+.filter-options {
     height: 30px;
     border-width: 0px;
 }
 
-.filter-options:hover{
-    background-color:#e3e3e3;
+.filter-options:hover {
+    background-color: #e3e3e3;
 }
 
-.active-filter{
+.active-filter {
     border: 1px solid grey;
 }
 
-.admin-dashboard .table-head{
+.admin-dashboard .table-head {
     background-color: lightgrey;
 }
-.admin-dashboard tr{
+
+.admin-dashboard tr {
     font-size: 12px;
 }
 
-.admin-dashboard .patient-request-row{
+.admin-dashboard .patient-request-row {
     background-color: #5fbc61;
     color: white;
 }
-.admin-dashboard .family-friend-request-row{
+
+.admin-dashboard .family-friend-request-row {
     background-color: #ed9124;
     color: white;
 }
-.admin-dashboard .concierge-request-row{
+
+.admin-dashboard .concierge-request-row {
     background-color: #e26277;
     color: white;
 }
-.admin-dashboard .business-request-row{
+
+.admin-dashboard .business-request-row {
     background-color: #007fc6;
     color: white;
 }
-.admin-dashboard .vip-request-row{
+
+.admin-dashboard .vip-request-row {
     background-color: #9966cd;
     color: white;
 }
 
-.admin-dashboard .white-border-btn{
+.admin-dashboard .white-border-btn {
     border: 1px solid white;
     border-radius: 5px;
 }

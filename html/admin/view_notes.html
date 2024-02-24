@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Dashboard</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body class="admin-dashboard">
+
+    <header class="">
+        <div class="d-flex mx-3 align-items-center justify-content-between">
+            <img src="/images/hallo_doc_logo.png" alt="logo_icon" height="100px">
+            <div>
+                <span class="mx-1">Welcome <b>@ViewData["Username"]</b></span>
+                <a asp-controller="Patient" asp-action="Logout" class="btn btn-outline-info shadow-none night-mode-btn">
+                    <svg class="d-flex d-md-none" fill="#00ffff" height="24px" width="24px" version="1.1" id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 384.971 384.971" xml:space="preserve">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <g id="Sign_Out">
+                                    <path
+                                        d="M180.455,360.91H24.061V24.061h156.394c6.641,0,12.03-5.39,12.03-12.03s-5.39-12.03-12.03-12.03H12.03 C5.39,0.001,0,5.39,0,12.031V372.94c0,6.641,5.39,12.03,12.03,12.03h168.424c6.641,0,12.03-5.39,12.03-12.03 C192.485,366.299,187.095,360.91,180.455,360.91z">
+                                    </path>
+                                    <path
+                                        d="M381.481,184.088l-83.009-84.2c-4.704-4.752-12.319-4.74-17.011,0c-4.704,4.74-4.704,12.439,0,17.179l62.558,63.46H96.279 c-6.641,0-12.03,5.438-12.03,12.151c0,6.713,5.39,12.151,12.03,12.151h247.74l-62.558,63.46c-4.704,4.752-4.704,12.439,0,17.179 c4.704,4.752,12.319,4.752,17.011,0l82.997-84.2C386.113,196.588,386.161,188.756,381.481,184.088z">
+                                    </path>
+                                </g>
+                                <g> </g>
+                                <g> </g>
+                                <g> </g>
+                                <g> </g>
+                                <g> </g>
+                                <g> </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="d-none d-md-flex">Logout</span>
+                </a>
+                <button onclick="myFunction()" class="btn btn-outline-info shadow-none night-mode-btn mx-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                        viewBox="0 0 24 24" width="24px">
+                        <rect fill="none" height="24" width="24" />
+                        <path
+                            d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <hr class="m-0">
+
+    <ul class="nav nav-pills ps-4 shadow" id="myTab" role="tablist">
+        <li class="nav-item active" role="presentation">
+            <a class="nav-link px-0" id="dashboard-tab">
+                <span class="tabHeader py-2 px-3">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link px-0" id="dashboard-tab">
+                <span class="tabHeader py-2 px-3">Provider Location</span>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link px-0" id="dashboard-tab">
+                <span class="tabHeader py-2 px-3">My Profile</span>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link px-0" id="dashboard-tab">
+                <span class="tabHeader py-2 px-3">Providers</span>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link px-0" id="dashboard-tab">
+                <span class="tabHeader py-2 px-3">Partners</span>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link px-0" id="dashboard-tab">
+                <span class="tabHeader py-2 px-3">Access</span>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link px-0" id="dashboard-tab">
+                <span class="tabHeader py-2 px-3">Records</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="container-fluid d-flex justify-content-center row ">
+
+        <div class="col-8">
+
+            <div class="d-flex justify-content-between mt-3">
+
+                <h4>Notes</h4>
+
+                <a asp-controller="Admin" asp-action="Dashboard"
+                    class="btn btn-outline-info shadow-none night-mode-btn d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 -960 960 960">
+                        <path
+                            d="m142-480 294 294q15 15 14.5 35T435-116q-15 15-35 15t-35-15L57-423q-12-12-18-27t-6-30q0-15 6-30t18-27l308-308q15-15 35.5-14.5T436-844q15 15 15 35t-15 35L142-480Z" />
+                    </svg>
+                    <span>Back</span>
+                </a>
+
+            </div>
+
+            <form method="post">
+
+                <div class="shadow p-3 dashboard-card mt-4">
+
+                    <div class="row">
+
+                        <div class="d-flex col-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" width="30" height="30" viewBox="0 0 256 256">
+
+                                <defs>
+                                </defs>
+                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                    transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                    <path
+                                        d="M 69.131 75.433 c -0.623 0 -1.252 -0.121 -1.854 -0.37 c -1.813 -0.75 -2.984 -2.503 -2.984 -4.464 V 67.11 H 34.779 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 30.684 c 2.664 0 4.831 2.168 4.831 4.832 v 1.837 l 13.224 -13.224 L 70.294 41.332 v 1.837 c 0 2.664 -2.167 4.832 -4.831 4.832 H 47.124 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 h 17.17 v -3.489 c 0 -1.962 1.171 -3.714 2.984 -4.465 c 1.814 -0.75 3.879 -0.339 5.266 1.049 l 16.044 16.044 c 1.884 1.884 1.884 4.948 0 6.832 L 72.542 74.016 C 71.617 74.943 70.386 75.433 69.131 75.433 z"
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: currentColor; fill-rule: nonzero; opacity: 1;"
+                                        transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <path
+                                        d="M 20.869 56.323 c -1.255 0 -2.484 -0.49 -3.411 -1.416 L 1.413 38.862 c -1.884 -1.884 -1.884 -4.949 0 -6.833 l 16.044 -16.044 c 1.386 -1.386 3.454 -1.798 5.265 -1.047 c 1.813 0.75 2.984 2.503 2.984 4.464 v 3.489 h 29.515 c 1.657 0 3 1.343 3 3 c 0 1.657 -1.343 3 -3 3 H 24.538 c -2.664 0 -4.832 -2.168 -4.832 -4.832 v -1.837 L 6.482 35.445 l 13.224 13.224 v -1.837 c 0 -2.665 2.168 -4.832 4.832 -4.832 h 22.587 c 1.657 0 3 1.343 3 3 c 0 1.657 -1.343 3 -3 3 H 25.706 v 3.488 c 0 1.961 -1.171 3.713 -2.983 4.464 C 22.122 56.202 21.492 56.323 20.869 56.323 z"
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: currentColor; fill-rule: nonzero; opacity: 1;"
+                                        transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                </g>
+                            </svg>
+                            <div class="ms-2">
+                                <h6 class="fw-bold">Transfer Notes</h6>
+                                <span class="m-0 fw-normal" style="color:grey;">Admin transfered shit from Physician to
+                                    Patient</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex col-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" width="30" height="30" viewBox="0 0 256 256">
+
+                                <defs>
+                                </defs>
+                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                    transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                    <path
+                                        d="M 69.131 75.433 c -0.623 0 -1.252 -0.121 -1.854 -0.37 c -1.813 -0.75 -2.984 -2.503 -2.984 -4.464 V 67.11 H 34.779 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 30.684 c 2.664 0 4.831 2.168 4.831 4.832 v 1.837 l 13.224 -13.224 L 70.294 41.332 v 1.837 c 0 2.664 -2.167 4.832 -4.831 4.832 H 47.124 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 h 17.17 v -3.489 c 0 -1.962 1.171 -3.714 2.984 -4.465 c 1.814 -0.75 3.879 -0.339 5.266 1.049 l 16.044 16.044 c 1.884 1.884 1.884 4.948 0 6.832 L 72.542 74.016 C 71.617 74.943 70.386 75.433 69.131 75.433 z"
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: currentColor; fill-rule: nonzero; opacity: 1;"
+                                        transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                    <path
+                                        d="M 20.869 56.323 c -1.255 0 -2.484 -0.49 -3.411 -1.416 L 1.413 38.862 c -1.884 -1.884 -1.884 -4.949 0 -6.833 l 16.044 -16.044 c 1.386 -1.386 3.454 -1.798 5.265 -1.047 c 1.813 0.75 2.984 2.503 2.984 4.464 v 3.489 h 29.515 c 1.657 0 3 1.343 3 3 c 0 1.657 -1.343 3 -3 3 H 24.538 c -2.664 0 -4.832 -2.168 -4.832 -4.832 v -1.837 L 6.482 35.445 l 13.224 13.224 v -1.837 c 0 -2.665 2.168 -4.832 4.832 -4.832 h 22.587 c 1.657 0 3 1.343 3 3 c 0 1.657 -1.343 3 -3 3 H 25.706 v 3.488 c 0 1.961 -1.171 3.713 -2.983 4.464 C 22.122 56.202 21.492 56.323 20.869 56.323 z"
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: currentColor; fill-rule: nonzero; opacity: 1;"
+                                        transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                </g>
+                            </svg>
+                            <div class="ms-2">
+                                <h6 class="fw-bold">Physician Notes</h6>
+                                <span class="m-0 fw-normal" style="color:grey;">Physician added: SHIT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            width="30" height="30" viewBox="0 0 256 256">
+
+                            <defs>
+                            </defs>
+                            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                <path
+                                    d="M 69.131 75.433 c -0.623 0 -1.252 -0.121 -1.854 -0.37 c -1.813 -0.75 -2.984 -2.503 -2.984 -4.464 V 67.11 H 34.779 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 30.684 c 2.664 0 4.831 2.168 4.831 4.832 v 1.837 l 13.224 -13.224 L 70.294 41.332 v 1.837 c 0 2.664 -2.167 4.832 -4.831 4.832 H 47.124 c -1.657 0 -3 -1.343 -3 -3 c 0 -1.657 1.343 -3 3 -3 h 17.17 v -3.489 c 0 -1.962 1.171 -3.714 2.984 -4.465 c 1.814 -0.75 3.879 -0.339 5.266 1.049 l 16.044 16.044 c 1.884 1.884 1.884 4.948 0 6.832 L 72.542 74.016 C 71.617 74.943 70.386 75.433 69.131 75.433 z"
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: currentColor; fill-rule: nonzero; opacity: 1;"
+                                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                <path
+                                    d="M 20.869 56.323 c -1.255 0 -2.484 -0.49 -3.411 -1.416 L 1.413 38.862 c -1.884 -1.884 -1.884 -4.949 0 -6.833 l 16.044 -16.044 c 1.386 -1.386 3.454 -1.798 5.265 -1.047 c 1.813 0.75 2.984 2.503 2.984 4.464 v 3.489 h 29.515 c 1.657 0 3 1.343 3 3 c 0 1.657 -1.343 3 -3 3 H 24.538 c -2.664 0 -4.832 -2.168 -4.832 -4.832 v -1.837 L 6.482 35.445 l 13.224 13.224 v -1.837 c 0 -2.665 2.168 -4.832 4.832 -4.832 h 22.587 c 1.657 0 3 1.343 3 3 c 0 1.657 -1.343 3 -3 3 H 25.706 v 3.488 c 0 1.961 -1.171 3.713 -2.983 4.464 C 22.122 56.202 21.492 56.323 20.869 56.323 z"
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: currentColor; fill-rule: nonzero; opacity: 1;"
+                                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            </g>
+                        </svg>
+                        <div class="ms-2">
+                            <h6 class="fw-bold">Admin Notes</h6>
+                            <span class="m-0 fw-normal" style="color:grey;">Admin added: MORE SHIT</span>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mt-3">
+                        <textarea asp-for="patientNotes" style="height:200px" class="form-control"
+                            placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+                        <label for="floatingTextarea2">Admin Notes</label>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+
+                        <button type="submit" onclick="" class="btn mt-3 py-2 px-4"
+                            style="background-color: #10bce9; color: white;">
+                            Save Changes
+                        </button>
+
+                    </div>
+            </form>
+
+        </div>
+
+
+        <div style="height: 20px;"></div>
+
+    </div>
+
+    <script src="/js/admin.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+        </script>
+
+    <script>
+
+        $(".status-tab").click(function () {
+            // $(this).find("div:first").after('<svg fill="black" height="10px" width="20px" viewBox="0 0 200 100"><polygon points="0,0 100,100 200,0 " /></svg>');
+            $(this).addClass("active");
+            $(this).children("svg").attr('display', 'block');
+            $('.status-tab').not(this).children("svg").attr('display', 'none');
+            $('.status-tab').not(this).removeClass("active");
+        });
+
+        $("#status-new-tab").click();
+
+    </script>
+
+</body>
+
+</html>
