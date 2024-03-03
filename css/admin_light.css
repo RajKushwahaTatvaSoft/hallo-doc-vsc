@@ -459,3 +459,19 @@ th:first-child {
     border: 1px solid white;
     border-radius: 5px;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .status-tab svg {
+        display: none;
+    }
+    .status-tab div{
+        border-radius: 0px;
+    }
+
+    .filter-options{
+        font-size: 10px;
+        height: 40px;
+    }
+
+}

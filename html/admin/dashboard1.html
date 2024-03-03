@@ -66,190 +66,6 @@
 
     <hr class="m-0">
 
-    <!-- My Modal -->
-
-    <!-- Create New Request Modal -->
-    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info">
-                    <div class="modal-dark modal-title text-white" id="exampleModalLongTitle">Create New Request</div>
-                    <button type="button" class="btn" aria-label="Close" data-bs-dismiss="modal">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="#FFFFFF">
-                            <path d="M0 0h24v24H0V0z" fill="none" />
-                            <path
-                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
-                        </svg>
-                    </button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <span class="modal-head">Here, I want to create new request for ...</span>
-                        <div class="modal-flex d-flex justify-content-center my-3">
-                            <div class="btn create-request-active create-request-btn border border-1 border-info"
-                                onclick="toggleCreateRequest(this)"> Me </div>
-                            <a id="request-me-anchor" asp-controller="Patient" asp-action="RequestForMe" hidden></a>
-                            <div class="btn ms-2 border border-1 someone-else-btn create-request-btn border-info"
-                                onclick="toggleCreateRequest(this)"> Some One Else</div>
-                            <a id="request-someone-else-anchor" asp-controller="Patient"
-                                asp-action="RequestForSomeoneElse" hidden></a>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a type="button" class="btn btn-info text-white" data-bs-dismiss="modal"
-                            onclick="redirect()">Continue</a>
-                        <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Cancel Case Modal -->
-    <!-- 
-    <div class="modal  fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info">
-                    <div class="modal-dark modal-title text-white" id="exampleModalLongTitle">Confirm Cancellation
-                    </div>
-                    <button type="button" class="btn" aria-label="Close" data-bs-dismiss="modal">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="#FFFFFF">
-                            <path d="M0 0h24v24H0V0z" fill="none" />
-                            <path
-                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
-                        </svg>
-                    </button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <span class="modal-head">Patient Name : <b style="color: var(--primary);">test test</b></span>
-                        <div class="modal-flex my-3">
-
-                            <div class="form-floating mt-3">
-                                <select asp-for="Type" class="form-select" id="floatingSelectGrid">
-                                    <option value="Mobile" selected>Mobile</option>
-                                    <option value="Telephone">Telephone</option>
-                                </select>
-                                <label for="floatingSelectGrid">Works with selects</label>
-                            </div>
-
-                            <div class="form-floating mt-3">
-                                <input type="text" class="form-control" id="notes">
-                                <label for="notes">Provide Additional Notes</label>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a type="button" class="btn btn-info text-white" data-bs-dismiss="modal"
-                            onclick="redirect()">Continue</a>
-                        <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Assign Case Modal -->
-
-    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info">
-                    <div class="modal-dark modal-title text-white" id="exampleModalLongTitle">Assign Request
-                    </div>
-                    <button type="button" class="btn" aria-label="Close" data-bs-dismiss="modal">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="#FFFFFF">
-                            <path d="M0 0h24v24H0V0z" fill="none" />
-                            <path
-                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
-                        </svg>
-                    </button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <span class="modal-head">To assign this request, search and select another Physician</span>
-                        <div class="modal-flex my-3">
-
-                            <div class="form-floating mt-3">
-                                <select asp-for="Type" class="form-select" id="floatingSelectGrid">
-                                    <option value="Mobile" selected>Maryland</option>
-                                    <option value="Telephone">Tom Halland</option>
-                                </select>
-                                <label for="floatingSelectGrid">Narrow Search By Region</label>
-                            </div>
-
-
-                            <div class="form-floating mt-3">
-                                <select asp-for="Type" class="form-select" id="floatingSelectGrid">
-                                    <option value="Mobile">Maryland</option>
-                                    <option value="Telephone">Tom Halland</option>
-                                </select>
-                                <label for="floatingSelectGrid">Select Physician</label>
-                            </div>
-
-                            <div class="form-floating mt-3">
-                                <textarea style="height: 100px;" type="text" class="form-control" id="notes"></textarea>
-                                <label for="notes">Description</label>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a type="button" class="btn btn-info text-white" data-bs-dismiss="modal"
-                            onclick="redirect()">Submit</a>
-                        <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Block Case -->
-
-    <div class="modal  fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info">
-                    <div class="modal-dark modal-title text-white" id="exampleModalLongTitle">Confirm Block
-                    </div>
-                    <button type="button" class="btn" aria-label="Close" data-bs-dismiss="modal">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="#FFFFFF">
-                            <path d="M0 0h24v24H0V0z" fill="none" />
-                            <path
-                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
-                        </svg>
-                    </button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <span class="modal-head">Patient Name : <b style="color: var(--primary);">test test</b></span>
-                        <div class="modal-flex my-3">
-                            <div class="form-floating mt-3">
-                                <textarea style="height: 100px;" type="text" class="form-control" id="notes"></textarea>
-                                <label for="notes">Reason for Block Request</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a type="button" class="btn btn-info text-white" data-bs-dismiss="modal"
-                            onclick="redirect()">Continue</a>
-                        <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <!-- nav tabs -->
     <ul class="nav nav-pills ps-4 shadow" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
@@ -298,37 +114,41 @@
             <div class="col-4 col-md-2 mt-3 d-flex flex-column status-tab active align-items-center"
                 id="status-new-tab">
 
-                <div class="py-2 ps-2 w-100 status-new">
+                <div class="py-2 px-2 w-100 status-new d-flex flex-column justify-content-center align-items-md-start align-items-center">
+
                     <div class="d-flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="currentcolor">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                            width="24px" fill="currentcolor">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                         </svg>
-                        <span class="ms-2 text-uppercase">new</span>
+                        <span class="text-uppercase h6">new</span>
                     </div>
                     <span class="fw-bold">1452</span>
+
                 </div>
 
-                <svg fill="#203f9a" height="10px" width="20px" viewBox="0 0 200 100">
+                <svg class="" fill="#203f9a" height="10px" width="20px" viewBox="0 0 200 100">
                     <polygon points="0,0 100,100 200,0 " />
                 </svg>
 
             </div>
 
             <div class="col-4 col-md-2 mt-3 d-flex flex-column status-tab align-items-center">
-                <div class="py-2 ps-2 w-100 status-pending">
+                <div class="py-2 px-2 w-100 status-pending d-flex flex-column justify-content-center align-items-md-start align-items-center">
+
                     <div class="d-flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="currentcolor">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                            width="24px" fill="currentcolor">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                         </svg>
-                        <span class="ms-2 text-uppercase">pending</span>
+                        <span class="text-uppercase h6">pending</span>
                     </div>
-                    <span class="fw-bold">266</span>
+                    <span class="fw-bold">99</span>
+
                 </div>
 
                 <svg fill="#00adef" height="10px" width="20px" viewBox="0 0 200 100">
@@ -338,17 +158,19 @@
             </div>
 
             <div class="col-4 col-md-2 mt-3 d-flex flex-column status-tab align-items-center">
-                <div class="py-2 ps-2 w-100 status-active">
+                <div class="py-2 px-2 w-100 status-active d-flex flex-column justify-content-center align-items-md-start align-items-center">
+
                     <div class="d-flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="currentcolor">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                            width="24px" fill="currentcolor">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                         </svg>
-                        <span class="ms-2 text-uppercase">active</span>
+                        <span class="text-uppercase h6">active</span>
                     </div>
-                    <span class="fw-bold">266</span>
+                    <span class="fw-bold">1452</span>
+
                 </div>
 
                 <svg fill="#228c20" height="10px" width="20px" viewBox="0 0 200 100">
@@ -358,17 +180,19 @@
             </div>
 
             <div class="col-4 col-md-2 mt-3 d-flex flex-column status-tab align-items-center">
-                <div class="py-2 ps-2 w-100 status-conclude">
+                <div class="py-2 px-2 w-100 status-conclude d-flex flex-column justify-content-center align-items-md-start align-items-center">
+
                     <div class="d-flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="currentcolor">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                            width="24px" fill="currentcolor">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                         </svg>
-                        <span class="ms-2 text-uppercase">conclude</span>
+                        <span class="text-uppercase h6">conclude</span>
                     </div>
-                    <span class="fw-bold">266</span>
+                    <span class="fw-bold">1452</span>
+
                 </div>
 
                 <svg fill="#da0f82" height="10px" width="20px" viewBox="0 0 200 100">
@@ -378,17 +202,19 @@
             </div>
 
             <div class="col-4 col-md-2 mt-3 d-flex flex-column status-tab align-items-center">
-                <div class="py-2 ps-2 w-100 status-to-close">
+                <div class="py-2 px-2 w-100 status-to-close d-flex flex-column justify-content-center align-items-md-start align-items-center">
+
                     <div class="d-flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="currentcolor">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                            width="24px" fill="currentcolor">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                         </svg>
-                        <span class="ms-2 text-uppercase">to close</span>
+                        <span class="text-uppercase h6">to close</span>
                     </div>
-                    <span class="fw-bold">266</span>
+                    <span class="fw-bold">1452</span>
+
                 </div>
 
                 <svg fill="#0370d7" height="10px" width="20px" viewBox="0 0 200 100">
@@ -398,17 +224,19 @@
             </div>
 
             <div class="col-4 col-md-2 mt-3 d-flex flex-column status-tab align-items-center">
-                <div class="py-2 ps-2 w-100 status-unpaid">
+                <div class="py-2 px-2 w-100 status-unpaid d-flex flex-column justify-content-center align-items-md-start align-items-center">
+
                     <div class="d-flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="currentcolor">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                            width="24px" fill="currentcolor">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                         </svg>
-                        <span class="ms-2 text-uppercase">unpaid</span>
+                        <span class="text-uppercase h6">unpaid</span>
                     </div>
-                    <span class="fw-bold">266</span>
+                    <span class="fw-bold">1452</span>
+
                 </div>
 
                 <svg fill="#9966cd" height="10px" width="20px" viewBox="0 0 200 100">
@@ -434,7 +262,7 @@
                         <path transform="scale(-1, 1) translate(-20,0)"
                             d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
                     </svg>
-                    <span class="ms-1 text-white">Send Link</span>
+                    <span class="ms-1 d-none d-md-inline  d-md-inline text-white">Send Link</span>
                 </button>
 
                 <button type="submit" class="mx-1 px-2 py-1 btn btn-primary" style="background-color:#10bce9">
@@ -443,7 +271,7 @@
                         <path transform="scale(-1, 1) translate(-20,0)"
                             d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
                     </svg>
-                    <span class="ms-1 text-white">Create Request</span>
+                    <span class="ms-1 d-none d-md-inline  text-white">Create Request</span>
                 </button>
 
                 <button type="submit" class="mx-1 px-2 py-1 btn btn-primary" style="background-color:#10bce9">
@@ -452,7 +280,7 @@
                         <path transform="scale(-1, 1) translate(-20,0)"
                             d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
                     </svg>
-                    <span class="ms-1 text-white">Export</span>
+                    <span class="ms-1 d-none d-md-inline  text-white">Export</span>
                 </button>
 
                 <button type="submit" class="mx-1 px-2 py-1 btn btn-primary" style="background-color:#10bce9">
@@ -461,7 +289,7 @@
                             d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
                         <text x="10" y="18" style="font-size: 5px;fill: white">ALL</text>
                     </svg>
-                    <span class="ms-1 text-white">Export All</span>
+                    <span class="ms-1 d-none d-md-inline  text-white">Export All</span>
                 </button>
 
                 <button type="submit" class="mx-1 px-2 py-1 btn btn-primary" style="background-color:#10bce9">
@@ -470,17 +298,17 @@
                             d="M6.598 5.013a.144.144 0 0 1 .202.134V6.3a.5.5 0 0 0 .5.5c.667 0 2.013.005 3.3.822.984.624 1.99 1.76 2.595 3.876-1.02-.983-2.185-1.516-3.205-1.799a8.74 8.74 0 0 0-1.921-.306 7.404 7.404 0 0 0-.798.008h-.013l-.005.001h-.001L7.3 9.9l-.05-.498a.5.5 0 0 0-.45.498v1.153c0 .108-.11.176-.202.134L2.614 8.254a.503.503 0 0 0-.042-.028.147.147 0 0 1 0-.252.499.499 0 0 0 .042-.028l3.984-2.933zM7.8 10.386c.068 0 .143.003.223.006.434.02 1.034.086 1.7.271 1.326.368 2.896 1.202 3.94 3.08a.5.5 0 0 0 .933-.305c-.464-3.71-1.886-5.662-3.46-6.66-1.245-.79-2.527-.942-3.336-.971v-.66a1.144 1.144 0 0 0-1.767-.96l-3.994 2.94a1.147 1.147 0 0 0 0 1.946l3.994 2.94a1.144 1.144 0 0 0 1.767-.96v-.667z" />
                         <text x="10" y="18" style="font-size: 5px;fill: white">ALL</text>
                     </svg>
-                    <span class="ms-1 text-white">Request DTY Support</span>
+                    <span class="ms-1 d-none d-md-inline  text-white">Request DTY Support</span>
                 </button>
             </div>
 
         </div>
 
-        <div class="d-flex ps-3 mt-3 align-items-center justify-content-between">
+        <div class="d-md-flex px-3  align-items-center justify-content-center">
 
-            <div class="d-flex">
+            <div class="d-md-flex justify-content-md-evenly flex-grow-1">
 
-                <div class="d-flex normal-input rounded align-items-center ps-2">
+                <div class="d-flex normal-input rounded align-items-center ps-2 mt-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
                         <path
                             d="M 21 3 C 11.654545 3 4 10.654545 4 20 C 4 29.345455 11.654545 37 21 37 C 24.701287 37 28.127393 35.786719 30.927734 33.755859 L 44.085938 46.914062 L 46.914062 44.085938 L 33.875 31.046875 C 36.43682 28.068316 38 24.210207 38 20 C 38 10.654545 30.345455 3 21 3 z M 21 5 C 29.254545 5 36 11.745455 36 20 C 36 28.254545 29.254545 35 21 35 C 12.745455 35 6 28.254545 6 20 C 6 11.745455 12.745455 5 21 5 z">
@@ -489,7 +317,7 @@
                     <input type="text" class="form-control" placeholder="Search Patients">
                 </div>
 
-                <div class="d-flex normal-input rounded align-items-center ms-2 ps-2">
+                <div class="d-flex normal-input rounded align-items-center ps-2 mt-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
                         <path
                             d="M 21 3 C 11.654545 3 4 10.654545 4 20 C 4 29.345455 11.654545 37 21 37 C 24.701287 37 28.127393 35.786719 30.927734 33.755859 L 44.085938 46.914062 L 46.914062 44.085938 L 33.875 31.046875 C 36.43682 28.068316 38 24.210207 38 20 C 38 10.654545 30.345455 3 21 3 z M 21 5 C 29.254545 5 36 11.745455 36 20 C 36 28.254545 29.254545 35 21 35 C 12.745455 35 6 28.254545 6 20 C 6 11.745455 12.745455 5 21 5 z">
@@ -504,48 +332,48 @@
                 </div>
             </div>
 
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center mt-3">
 
                 <button class="active-filter filter-options d-flex align-items-center  px-2 py-1 rounded">
                     <span>All</span>
                 </button>
 
-                <button class="filter-options px-2 py-1 rounded d-flex align-items-center ms-2">
+                <button class="filter-options px-2 py-1 rounded d-flex justify-content-center flex-column flex-md-row align-items-center ms-2">
                     <svg height="15" width="15" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <circle fill="#5fbc61" r="45" cx="50" cy="50" stroke="grey" stroke-width="3" />
                     </svg>
-                    <span class="ms-2">Patient</span>
+                    <span class="ms-md-2 text-center">Patient</span>
                 </button>
 
-                <button class="filter-options px-2 py-1 rounded d-flex align-items-center ms-2">
+                <button class="filter-options px-2 py-1 rounded d-flex justify-content-center flex-column flex-md-row align-items-center ms-2">
                     <svg height="15" width="15" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <circle fill="#ed9124" r="45" cx="50" cy="50" stroke="grey" stroke-width="3" />
                     </svg>
-                    <span class="ms-2">Family/Friend</span>
+                    <span class="ms-md-2">Family/Friend</span>
                 </button>
-                <button class="filter-options px-2 py-1 rounded d-flex align-items-center ms-2">
+                <button class="filter-options px-2 py-1 rounded d-flex justify-content-center flex-column flex-md-row align-items-center ms-2">
                     <svg height="15" width="15" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <circle fill="#e26277" r="45" cx="50" cy="50" stroke="grey" stroke-width="3" />
                     </svg>
-                    <span class="ms-2">Business</span>
+                    <span class="ms-md-2">Business</span>
                 </button>
-                <button class="filter-options px-2 py-1 rounded d-flex align-items-center ms-2">
+                <button class="filter-options px-2 py-1 rounded d-flex justify-content-center flex-column flex-md-row align-items-center ms-2">
                     <svg height="15" width="15" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <circle fill="#007fc6" r="45" cx="50" cy="50" stroke="grey" stroke-width="3" />
                     </svg>
-                    <span class="ms-2">Concierge</span>
+                    <span class="ms-md-2">Concierge</span>
                 </button>
-                <button class="filter-options px-2 py-1 rounded d-flex align-items-center ms-2">
+                <button class="filter-options px-2 py-1 rounded d-flex justify-content-center flex-column flex-md-row align-items-center ms-2">
                     <svg height="15" width="15" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <circle fill="#9966cd" r="45" cx="50" cy="50" stroke="grey" stroke-width="3" />
                     </svg>
-                    <span class="ms-2">VIP</span>
+                    <span class="ms-md-2">VIP</span>
                 </button>
 
             </div>
         </div>
 
-        <div class="table-responsive mt-3">
+        <div class="table-responsive mt-3 d-none d-md-block">
             <table class="table">
 
                 <colgroup>
